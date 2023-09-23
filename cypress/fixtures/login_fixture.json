@@ -1,0 +1,23 @@
+{
+    "loginButton" : {
+        "On" : "Log in",
+        "Off" : "Hello, John"
+    }, 
+
+    "username": {
+        "input" : "[tabindex='1']",
+        "data" : {
+            "valid" : "John",
+            "invalid" : ""
+        }
+    },
+    "password" : {
+        "input" : "[tabindex='2']",
+        "data" : {
+            "valid" : "Admin1234.",
+            "invalid" : "admin123"
+        }
+    },
+    "Submitbutton" : "[tabindex='3']"
+    
+}

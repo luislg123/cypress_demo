@@ -15,7 +15,8 @@
         "input" : "[tabindex='2']",
         "data" : {
             "valid" : "Admin1234.",
-            "invalid" : "admin123"
+            "invalid" : "Admin123",
+            "null" : ""
         }
     },
     "Submitbutton" : "[tabindex='3']"

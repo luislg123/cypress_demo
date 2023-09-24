@@ -1,4 +1,4 @@
-describe('US # : titulo de la user story',()=>{
+describe('US # : chequeo de boton',()=>{
     beforeEach('en este apartado se escriben las precondiciones de los casos de pruba',() =>
     {
         cy.visit('https://example.cypress.io')
@@ -6,15 +6,23 @@ describe('US # : titulo de la user story',()=>{
         .eq(2)
         .click()
     })
-    it('US # | TC#1 : aqui va el nombre del otro caso de prueba', ()=>{
-        cy.get('.query-btn')
+
+    it('caso de prueba numero 1',() =>
+    {
+        cy.get('#query-btn')
         .click()
     })
-    it('US # | TC#2 : aqui va el nombre del otro caso de prueba', ()=>{
+
+    it('caso de prueba numero 2',() =>
+    {
         cy.get('.query-btn')
+        .click()
         .should('contain','Button')
     })
-    it('US # | TC#2 : aqui va el nombre del otro caso de prueba', ()=>{
+
+    it('caso de prueba numero 3',() =>
+    {
         cy.contains('Submit').click()
     })
+
 })

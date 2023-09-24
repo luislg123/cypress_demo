@@ -1,5 +1,5 @@
-describe('this is a test case',()=>{
-    beforeEach('precondicion de ir a la pagina y llegar al formulario',()=>
+describe('this is a User Story',()=>{
+    beforeEach('precondicion de ir a la pagina y llenar al formulario',()=>
     {
         cy.visit('https://demo.testim.io/')
         cy.contains('Log in').click()
@@ -8,25 +8,16 @@ describe('this is a test case',()=>{
 
     it('US # | TC#1 : validar inicio exitoso de formulario', ()=>
     {
-        cy.get("[type='text']").eq(4)
+        cy.get('[tabindex="1"]')//seleccion de username
           .type("John")
-        cy.get("[type='password']")
+
+        cy.get("[tabindex='2']")//seleccion de password
           .type("Admin123.")
-        cy.get("button[type='submit']")  
+          
+        cy.get("[tabindex='3']")//seleccion del boton submit 
           .click()
 
         cy.contains("Hello, John").should("be.visible")  
-    })
-    it('US # | TC#1 : validar inicio exitoso de formulario', ()=>
-    {
-        cy.get("[type='text']").eq(4)
-          .type("LUIS123456789")
-        cy.get("[type='password']")
-          .type("Admin")
-        cy.get("button[type='submit']")  
-          .click()
-
-        cy.contains("Hello, John").should("not.to.be.visible") 
-    })
+    }) 
 
 })
